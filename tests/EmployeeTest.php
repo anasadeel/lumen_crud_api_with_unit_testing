@@ -45,7 +45,7 @@ class EmployeeTest extends TestCase {
     public function test_can_delete_employee() {
         $employee = factory(Employee::class)->create();
         $this->delete('api/v1/employee/delete/' . $employee->id)
-                ->seeStatusCode(204);
+                ->seeStatusCode(200);
     }
 
     public function test_can_list_employees() {

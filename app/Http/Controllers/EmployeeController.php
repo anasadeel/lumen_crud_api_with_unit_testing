@@ -43,7 +43,7 @@ class EmployeeController extends Controller {
         $employee = Employee::find($id);
         $employee->delete();
 
-        return response()->json(null, 204);
+        return response()->json('Deleted Successfully!');
     }
 
 }
